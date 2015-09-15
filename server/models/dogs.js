@@ -1,8 +1,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Dogs = new Schema({
+var Dog = new Schema({
   name: String,
   breed: String,
   age: Number
 });
+
+mongoose.connect(process.env.MONGO_URI);
+
+mongoose.model('dogs', Dog);

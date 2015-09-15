@@ -9,4 +9,4 @@ var Dog = new Schema({
 
 mongoose.connect(process.env.MONGO_URI);
 
-mongoose.model('dogs', Dog);
+module.exports = mongoose.model('dogs', Dog);
